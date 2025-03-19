@@ -1,21 +1,29 @@
-### **Software Engineer Intern**  
-**January 2025 – June 2025 | ByteDance**  
+### **基于深度学习的⽹络暴⼒舆论智能治理系统**  
+**July 2024 – October 2024 | SDU**  
 
-Worked on the development and optimization of large-scale recommendation systems, focusing on algorithm improvements and system efficiency enhancements. Contributed to real-time data processing pipelines and model optimization for personalized content delivery.
+#### PROBLEM:  
+- 网络暴力语言存在语义模糊、动态演化、扩散极快等特点，⽽传统的⼈工审核方式存在响应时间过长、处理方式被动、识别精度较低且⽆法实时监测舆情热度的问题。  
 
-#### Key Contributions:  
-- Developed and optimized recommendation algorithms to enhance user engagement and content relevance.  
-- Designed and implemented real-time data processing workflows to improve model inference efficiency.  
-- Conducted A/B testing and performance analysis to refine recommendation strategies based on user behavior data.  
+#### IDEA:  
+- 在自建语料库基础上，通过微微调调Bert模型解决⽹络暴力语言难以识别的问题，并通过实时⽣成微博热榜话题热度曲线进⾏阈值判断解决处理延迟、被动、不全面的问题，最后通过微调T5模型生成积极评论由微博机器⼈定向发布完成扫描⼲预的过程。  
+
+#### CORE MODULE:  
+- **数据处理**：
+- 1.基于 Scrapy 框架构建**分布式爬⾍系统**，爬取微博话题 17 万条原始评论（含用户属性、时空标签），并通过⽂本规范化、消除噪音、谐音词替换等⽅式进⾏数据清洗。
+- 2.采用部分**重叠样本交叉标注**⽅式对语料库进⾏三级划分情感标注，并通过 Cohen's Kappa 系数检验标注⼀致性。
+
+- **模型训练**:
+- 1.基于bert-base-chinese模型微调，通过**动态采样**和**类权重**⽅法解决支持性评论数据稀疏问题，实现细粒度情感分类（攻击/ 中立 / 支持）。
+- 2.采用mengzi-t5-base作为baseline模型，创新性引⼊**注意⼒域约束**策略，确保⽣成内容的情感倾向与⼲预效果严格对齐。
+- 3.在测试阶段创新提出**数据闭环反馈**机制，将T5⽣成评论送⼊Bert分析情感计算立场符合率，将T5⽣成正向评论用于测试Bert类权重⽅法的有效性。
+- 4.微调的Bert模型在 1万条标注数据测试集上达到**91.2%**准确率（攻击性⽂本召回率**94.6%**），显著优于基线模型（TextCNN**78.4%**）；T5 ⽣成评论的立场符合率达**96.3%**。  
+
+#### CONTRIBUTIONS:
+- 提出并构建框架、⼤部分代码写作、全部数据集处理、完整的模型训练、研究报告写作、图表绘制⼯作。
+
+#### ACHIEVEMENTS：
+
+- 作为《数字时代⽹络暴⼒信息的多元化风险治理路径研究》的产出项目，实现了⼀个五层模块递进的实时检测⼲预⽹络暴⼒⾔论系统，并封装为**可面向用户授权管理**的微博机器⼈调用权限的**前后端交互系统**。
+- 该研究作品获得第⼗九届“挑战杯”全国⼤学生课外学术科技作品竞赛“揭榜挂帅”专项赛**国家级⼀等奖**。
 
 ---
-
-### **软件工程师实习生**  
-**2025年1月 – 2025年6月 | 字节跳动**  
-
-负责大规模推荐系统的开发与优化，专注于算法改进和系统效率提升。参与实时数据处理管道的构建，并优化模型推理流程，以提升个性化内容推荐效果。
-
-#### 主要贡献:  
-- 研发并优化推荐算法，提高用户互动率和内容相关性。  
-- 设计并实现实时数据处理流程，提升模型推理的计算效率。  
-- 进行A/B测试与性能分析，基于用户行为数据优化推荐策略。

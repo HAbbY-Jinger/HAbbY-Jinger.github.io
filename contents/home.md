@@ -1,20 +1,17 @@
-[![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
+[![HAbbY-Jinger](https://img.shields.io/badge/HAbbY-Jinger-github-blue?logo=github)](https://github.com/HAbbY-Jinger)
 
-I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
+I'm currently an Undergraduate Shan Dong University, CS-AI.
 
 #### Email  
-<code>XX@XX.XX</code>  
-<code>XX@XX.XX</code>
+<code>202200130123@mail.sdu.edu.cn</code>
+<code>lisiwwi@1366.com</code>  
+
 
 #### Education  
-**XX University**, Master of XX (XX – XX)  
-• GPA: XX/XX  
+**Shan Dong University**, Undergraduate of AI (22 – 26)  
+• GPA: 4.072/5.0  (ovral ranking 3/48) 
 
-**XX University**, Exchange student <br>  
-• As a XX, represented my college as an outstanding student for a XX exchange program.  
 
-**XX University**, Honours Bachelor of XX (XX – XX)  
-• GPA: XX/XX (top XX%)  
 
 #### Research Interests  
-XX, XX, XX, XX.
+有可视化、扩散模型等⽣成模型的研究经历，目前对⼤模型、视觉理解与⽣成、自回归等⽅向感兴趣
